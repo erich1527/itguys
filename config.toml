@@ -1,36 +1,74 @@
-baseurl = "/"
-languageCode = "zh-cmn-Hant"
-title = "Bingo"
-theme = "hugo-bingo"
-
-disableHugoGeneratorInject = true
-enableEmoji = true
-footnoteReturnLinkContents = "↩"
-hasCJKLanguage = true
-googleAnalytics = "UA-123-45"
+baseURL = "https://theitguys.us"
+languageCode = "en-us"
+title = "The IT Guys"
+description = "Cool Tag Line Here!"
+theme = "min_night"
+disqusShortname = ""
+googleAnalytics = ""
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "public/"]
 
 [permalinks]
-  post = "/posts/:slug/"
-
-[menu]
-
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 10
-
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts"
-    weight = 20
+    post = "/:year/:month/:day/:slug/"
 
 [params]
-  email = "username@domain"
-  github = "github_username"
-  linkedin = "linkedin_username"
-  medium = "medium_username"
-  twitter = "twitter_username"
-  facebook = "facebook_username"
-  instagram = "instagram_username"
+    author = "Eric Hendricks"
+    description = "Cool tag line to come!"
+    logo = "eric-disney.jpg"
+    twitterAuthor = "@eric_itguy"
+    githubUsername = "erich1527"
+    accent = "#386890" # dark colors do best
+    backgroundColor = "#f5f5f5"
+    font = "Mina" # should match the name on Google Fonts!
+    highlight = true
+    highlightStyle = "lakeside-light" # make this match accent
+    highlightLanguages = ["r", "bash", "go"]
+
+# adjust these as you see fit
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/post/"
+    name = "Posts"
+    weight = 2
+
+[[menu.main]]
+    url = "/project/"
+    name = "Projects"
+    weight = 3
+    
+[[menu.main]]
+    url = "/tags/"
+    name = "Tags"
+    weight = 4
+
+# Social icons to be shown on the right-hand side of the navigation bar
+# The "name" field should match the name of the icon to be used
+# The list of available icons can be found at http://fontawesome.io/icons/
+
+[[menu.icon]]
+    url = "mailto:eric@theitguys.us"
+    name = "envelope-o"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/erich1527"
+    name = "github"
+    weight = 2
+
+[[menu.icon]]
+    url = "https://twitter.com/eric_itguy"
+    name = "twitter"
+    weight = 3
+
+[[menu.icon]]
+    url = "https://www.linkedin.com/in/erichendricks/"
+    name = "linkedin"
+    weight = 4
+
+#[[menu.icon]]
+#    url = "https://www.stackoverflow.com/users/5878751/nate"
+#    name = "stack-overflow"
+#    weight = 5
